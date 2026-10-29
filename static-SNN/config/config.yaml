@@ -1,0 +1,58 @@
+# train options
+seed: 1
+nodes: 1
+gpus: 1
+nr: 0
+num_workers: 8
+epochs: 1000
+dataset: "CIFAR10"
+n_classes: 10
+image_size: 224
+batch_size: 1024
+pretrain: False
+dataset_dir: "./datasets"
+pin_memory: False
+
+start_epoch: 0
+
+knn_k: 200
+knn_t: 0.1
+
+#model option
+model: "resnet18"
+spiking: False
+timestep: 4
+sync_norm: False
+projection_dim: 512
+act_func: "MixedLIF"
+
+# loss options
+loss_type: "barlow_twins"  # "barlow_twins", "simclr", or "vicreg"
+temperature: 0.5           # only used for simclr
+
+# VICReg options (only used when loss_type = "vicreg")
+vicreg_sim_coeff: 25.0
+vicreg_std_coeff: 25.0
+vicreg_cov_coeff: 1.0
+optimizer: "Adam"
+lr: 3e-4
+lr_bias: 0.0048
+learning_rate_weights: 0.2
+learning_rate_biases: 0.0048
+clip_grad_norm: None
+
+temporal_loss: False
+cross_temporal: False
+simplified_loss: False
+
+# reload options
+model_path: "save" # set to the directory containing `checkpoint_##.tar`
+epoch_num: 1000 # set to checkpoint number
+reload: False
+
+# logistic regression options
+logistic_batch_size: 256
+logistic_epochs: 200
+eval_proportion: 1.0 # 0.01/0.1/1
+
+master_port: 12345
