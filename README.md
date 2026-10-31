@@ -244,17 +244,11 @@ Three activation function variants are implemented in `modules/spike_layer.py` (
 If you find this work useful, please cite:
 
 ```bibtex
-@inproceedings{zhou2026selfsupervised,
-  title     = {Self-Supervised Learning for Spiking Neural Networks},
-  author    = {Zhou, Chengwei and others},
-  booktitle = {Proceedings of the 43rd International Conference on Machine Learning (ICML)},
-  year      = {2026},
-  url       = {https://icml.cc/virtual/2026/poster/61778}
+@inproceedings{zhouspikeclr,
+  title={SpikeCLR: Self-Supervised Contrastive Learning for Visual Representations with Spiking Neural Networks},
+  author={Zhou, Chengwei and Datta, Gourav},
+  booktitle={Forty-third International Conference on Machine Learning}
 }
 ```
 
----
 
-## License
-
-This project is licensed under the MIT License. See [LICENSE.md](static-SNN/LICENSE.md) for details.
